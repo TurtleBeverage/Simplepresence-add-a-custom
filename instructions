@@ -55,3 +55,5 @@ At line one, change the value to the correct thing.
 At line two, change the file name to the new config file.
 Then delete the bracket at line 101 in renderer.js and paste that block of code in there
 Make sure that the time at the very bottom is at least 5 greater than the greatest value in your other JS files
+
+Package.json and add the script
