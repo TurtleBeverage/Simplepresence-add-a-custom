@@ -1,10 +1,10 @@
 So go into SimplePresence > Scripts > custom> Values.json
 Add in the additional values like below
-```{"Hype":false,"Turtle":true,"DND":false, "X":false,"Y":false}```
+``` {"Hype":false,"Turtle":true,"DND":false, "X":false,"Y":false} ```
 Then copy turtle.js and make a new file and name it whatever you'd like.js(edited)
 Then you'll need to edit it a bit (and reflect this across all of the files)
 
-```updateValues("new_thing", false)
+``` updateValues("new_thing", false)
 
 setTimeout(function () {
     updateValues("Hype", false)
@@ -18,14 +18,13 @@ setTimeout(function () {
   updateValues("Turtle", false)
 }, 15000);```
 
-
 You'll need to make sure that gets in every file in the right place, but make sure it's setting the right thing to true every time (it should be setting the files name to true)
 For every function, add an additional 5
 
 So after you do those steps above, go into Scripts > Renderer.js & go to the bottom.
 Copy & Paste this. 
 
-  } else if (values["DND"] == true) {
+ ``` } else if (values["DND"] == true) {
     const config = require('../../config_dnd.json')
     console.log(config.textConfig.details)
     console.log(config.textConfig.state)
@@ -51,7 +50,7 @@ Copy & Paste this.
       open('https://canary.discordapp.com/developers/applications/me/' + config.clientID.toString());
     }
   }
-  
+  ```
 At line one, change the value to the correct thing.
 At line two, change the file name to the new config file.
 Then delete the bracket at line 101 in renderer.js and paste that block of code in there
